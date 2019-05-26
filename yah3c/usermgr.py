@@ -28,7 +28,7 @@ class UserMgr:
             self.users_cfg_path = '/etc/yah3c.conf'
         else:
             self.users_cfg_path = path
-        self.config = configparser.ConfigParser()
+        self.config = configparser.RawConfigParser()
         self.config.read(self.users_cfg_path)
 
     def save_and_reload(self):
