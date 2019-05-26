@@ -41,19 +41,19 @@ def prompt_user_info():
         if password == password_again:
             break
         else:
-            print('Password do not match!')
+            print('Password does not match!')
 
-    dev = input('Decice(eth0 by default): ')
+    dev = input('Interface (eth0): ')
     if not dev:
         dev = 'eth0'
 
-    choice = input('Forked to background after authentication(Yes by default)\n<Y/N>: ')
+    choice = input('Fork to background after authentication (Y)\n<Y/N>: ')
     if choice == 'n' or choice == 'N':
         daemon = "False"
     else:
         daemon = "True"
 
-    dhcp_cmd = input('Dhcp command(Press Enter to pass): ')
+    dhcp_cmd = input('Dhcp command (Press Enter to pass): ')
     if not dhcp_cmd:
         dhcp_cmd = ''
 

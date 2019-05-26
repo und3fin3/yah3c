@@ -129,8 +129,8 @@ class EAPAuth:
 
             if self.login_info['dhcp_command']:
                 display_prompt('in', 'Obtaining IP Address:')
-                subprocess.call([self.login_info['dhcp_command'],
-                      self.login_info['ethernet_interface']])
+                subprocess.call(self.login_info['dhcp_command'],
+                      shell=True)
 
             if self.login_info['daemon'] == 'True':
                 daemonize('/dev/null', '/tmp/daemon.log', '/tmp/daemon.log')
